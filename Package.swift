@@ -54,9 +54,9 @@ var products: [Product] = [
 
 let buildInfo: BuildInfo
 #if swift(>=5.2)
-    buildInfo = BuildInfo(product: libraryBuildInfo.product + toolsBuildInfo.product,
-                          dependencies: libraryBuildInfo.dependencies + toolsBuildInfo.dependencies,
-                          targets: libraryBuildInfo.targets + toolsBuildInfo.targets)
+    buildInfo = BuildInfo(product: libraryBuildInfo.product,
+                          dependencies: libraryBuildInfo.dependencies,
+                          targets: libraryBuildInfo.targets)
 #else
     buildInfo = BuildInfo(product: libraryBuildInfo.product, dependencies: libraryBuildInfo.dependencies, targets: libraryBuildInfo.targets)
 #endif
