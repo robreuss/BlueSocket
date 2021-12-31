@@ -50,7 +50,7 @@ var products: [Product] = [
         name: "Socket",
         targets: ["Socket"]),
     ]
-#endif
+
 
 let buildInfo: BuildInfo
 #if swift(>=5.2)
