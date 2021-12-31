@@ -30,10 +30,6 @@ let libraryBuildInfo = BuildInfo(
         .library(
             name: "Socket",
             targets: ["Socket"]),
-        
-            .library(
-                name: "BlueSocketTestCommonLibrary",
-                targets: ["BlueSocketTestCommonLibrary"]),
     ],
     dependencies: [],
     targets: [
