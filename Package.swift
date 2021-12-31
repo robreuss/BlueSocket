@@ -42,15 +42,6 @@ let libraryBuildInfo = BuildInfo(
             dependencies: [],
             exclude: ["Info.plist", "Socket.h"]
         ),
-        .testTarget(
-            name: "SocketTests",
-            dependencies: ["Socket", "BlueSocketTestCommonLibrary"]
-        ),
-        
-        .target(
-            name: "BlueSocketTestCommonLibrary",
-            dependencies: [ "Socket" ]
-        ),
     ]
 )
 
@@ -58,20 +49,7 @@ var products: [Product] = [
     .library(
         name: "Socket",
         targets: ["Socket"]),
-
-    .library(
-        name: "BlueSocketTestCommonLibrary",
-        targets: ["BlueSocketTestCommonLibrary"]),
     ]
-#if swift(>=5.2)
-products.append(contentsOf: [
-    .executable(
-        name: "BlueSocketTestServer",
-        targets: ["BlueSocketTestServer"]),
-    .executable(
-        name: "BlueSocketTestClient",
-        targets: ["BlueSocketTestClient"])
-])
 #endif
 
 let buildInfo: BuildInfo
